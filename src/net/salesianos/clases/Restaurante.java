@@ -1,6 +1,5 @@
 package net.salesianos.clases;
 
-import java.util.ArrayList;
 
 public class Restaurante {
     private String restaurantName;
