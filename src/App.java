@@ -10,7 +10,6 @@ public class App {
     static final Scanner KEYBOARD = new Scanner(System.in);
     static final ArrayList<Restaurante> RESTAURANTS = new ArrayList<>();
 
-
     public static void main(String[] args) throws Exception {
 
         boolean salir = true;
@@ -23,8 +22,8 @@ public class App {
                 case "1":
                     aniadirRestaurante();
                     break;
-                case"2":
-
+                case "2":
+                    editarRestaurante();
                 default:
                     break;
             }
@@ -45,6 +44,15 @@ public class App {
         Restaurante restaurante = new Restaurante(name, localization, eschedual, puntation);
         RESTAURANTS.add(restaurante);
 
-        
+    }
+
+    public static void editarRestaurante() {
+        String nameToEdit = JOptionPane.showInputDialog(null, "indica el restaurante a editaar");
+        for (int i = 0; i < RESTAURANTS.size(); i++) {
+
+            if (nameToEdit.equals(RESTAURANTS.get(i).getRestaurantName())) {
+
+            }
+        }
     }
 }
