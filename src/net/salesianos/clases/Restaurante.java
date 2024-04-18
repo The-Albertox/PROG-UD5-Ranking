@@ -51,8 +51,7 @@ public class Restaurante {
 
     @Override
     public String toString() {
-        
-        return "nimbre " + restaurantName + "localizacion" + localization +"horario" + eschedual + " puntuacion" + puntation;
+        return "nombre" + restaurantName + "\n localizacion " + localization + " \n horario " + eschedual + "\n puntuacion" + puntation;
     }
 
 }

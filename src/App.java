@@ -9,7 +9,6 @@ import net.salesianos.menu.Menu;
 public class App {
     static final Scanner KEYBOARD = new Scanner(System.in);
     static final ArrayList<Restaurante> RESTAURANTS = new ArrayList<>();
-    static final String mensaje = "";
 
     public static void main(String[] args) throws Exception {
 
@@ -25,6 +24,10 @@ public class App {
                     break;
                 case "2":
                     editarRestaurante();
+                    break;
+                    case "3":
+                    mostrarRestaurante();
+                    break;
                 default:
                     break;
             }
@@ -49,9 +52,7 @@ public class App {
     public static void editarRestaurante() {
 
         for (int i = 0; i < RESTAURANTS.size(); i++) {
-
             String nameToEdit = JOptionPane.showInputDialog(null, "indica el nombre del restaurante a editar");
-
             if (nameToEdit.equals(RESTAURANTS.get(i).getRestaurantName())) {
 
                 JOptionPane.showInputDialog(null, "indica el nuevo nombre del restaurant");
@@ -72,6 +73,25 @@ public class App {
                 break;
             }
         }
-
     }
+
+    public static void mostrarRestaurante() {
+        String mensaje = "";
+        Restaurante ordenRestaurante;
+
+        for (int i = 0; i < RESTAURANTS.size() ; i++) {
+            for (int j = 0; j < RESTAURANTS.size() - 1; j++) {
+                if (RESTAURANTS.get(j + 1).getPuntation() > RESTAURANTS.get(j).getPuntation()) {
+                    ordenRestaurante = RESTAURANTS.get(j + 1);
+                    RESTAURANTS.set(j + 1, RESTAURANTS.get(j));
+                    RESTAURANTS.set(j, ordenRestaurante);
+                }
+            }
+        }
+        for (int i = 0; i < RESTAURANTS.size(); i++) {
+            mensaje = RESTAURANTS.get(i).toString();
+            JOptionPane.showMessageDialog(null, mensaje);
+        }
+    }
+
 }
