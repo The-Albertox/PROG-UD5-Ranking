@@ -25,8 +25,11 @@ public class App {
                 case "2":
                     editarRestaurante();
                     break;
-                    case "3":
+                case "3":
                     mostrarRestaurante();
+                    break;
+                case "4":
+                    eliminarRestaurante();
                     break;
                 default:
                     break;
@@ -79,7 +82,7 @@ public class App {
         String mensaje = "";
         Restaurante ordenRestaurante;
 
-        for (int i = 0; i < RESTAURANTS.size() ; i++) {
+        for (int i = 0; i < RESTAURANTS.size(); i++) {
             for (int j = 0; j < RESTAURANTS.size() - 1; j++) {
                 if (RESTAURANTS.get(j + 1).getPuntation() > RESTAURANTS.get(j).getPuntation()) {
                     ordenRestaurante = RESTAURANTS.get(j + 1);
@@ -94,4 +97,12 @@ public class App {
         }
     }
 
+    public static void eliminarRestaurante() {
+        for (int i = 0; i < RESTAURANTS.size(); i++) {
+            String nameToDelete = JOptionPane.showInputDialog(null, "indica el nombre del restaurante a eliminar");
+            if (nameToDelete.equals(RESTAURANTS.get(i).getRestaurantName())) {
+                RESTAURANTS.remove(i).setRestaurantName(null);
+            }
+        }
+    }
 }
