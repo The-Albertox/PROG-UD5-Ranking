@@ -84,7 +84,6 @@ public class App {
     public static void mostrarRestaurante() {
         String mensaje = "";
         Restaurante ordenRestaurante;
-
         for (int i = 0; i < RESTAURANTS.size(); i++) {
             for (int j = 0; j < RESTAURANTS.size() - 1; j++) {
                 if (RESTAURANTS.get(j + 1).getPuntation() > RESTAURANTS.get(j).getPuntation()) {
@@ -95,8 +94,13 @@ public class App {
             }
         }
         for (int i = 0; i < RESTAURANTS.size(); i++) {
-            mensaje = RESTAURANTS.get(i).toString();
-            JOptionPane.showMessageDialog(null, mensaje);
+            if (!RESTAURANTS.isEmpty()) {
+                mensaje = RESTAURANTS.get(i).toString();
+                JOptionPane.showMessageDialog(null, mensaje);
+            } else {
+                JOptionPane.showMessageDialog(null, "no hay restaurantes en la lista");
+                break;
+            }
         }
     }
 
@@ -105,6 +109,8 @@ public class App {
             String nameToDelete = JOptionPane.showInputDialog(null, "indica el nombre del restaurante a eliminar");
             if (nameToDelete.equals(RESTAURANTS.get(i).getRestaurantName())) {
                 RESTAURANTS.remove(i).setRestaurantName(null);
+            } else {
+                JOptionPane.showMessageDialog(null, "no se ha encontrado el restaurante");
             }
         }
     }
