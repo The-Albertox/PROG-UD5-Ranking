@@ -31,6 +31,9 @@ public class App {
                 case "4":
                     eliminarRestaurante();
                     break;
+                case "Q":
+                    salir = false;
+                    break;
                 default:
                     break;
             }
