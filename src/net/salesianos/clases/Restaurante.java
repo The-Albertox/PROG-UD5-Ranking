@@ -49,4 +49,10 @@ public class Restaurante {
         this.puntation = puntation;
     }
 
+    @Override
+    public String toString() {
+        
+        return "nimbre " + restaurantName + "localizacion" + localization +"horario" + eschedual + " puntuacion" + puntation;
+    }
+
 }
