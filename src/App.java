@@ -48,8 +48,14 @@ public class App {
 
         String eschedual = JOptionPane.showInputDialog(null, "introduzca el hotario");
 
-        String puntuacionText = JOptionPane.showInputDialog(null, "introduzca la puntuacion", null);
-        float puntation = Float.parseFloat(puntuacionText);
+        float puntation = 0;
+        try {
+            String puntuacionText = JOptionPane.showInputDialog(null, "introduzca la puntuacion", null);
+            puntation = Float.parseFloat(puntuacionText);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null,
+                    "Error, se ha creado el restaurante con una puntuacion inicial de 0 si desea cambiarlo por favor edite el restaurante");
+        }
 
         Restaurante restaurante = new Restaurante(name, localization, eschedual, puntation);
         RESTAURANTS.add(restaurante);
@@ -70,9 +76,14 @@ public class App {
                 String eschedualToEdit = JOptionPane.showInputDialog(null, "introduzca el nuevo horario");
                 RESTAURANTS.get(i).setEschedual(eschedualToEdit);
 
-                String puntutionToEdit = JOptionPane.showInputDialog(null, "indique la nueva puntuacion");
-                float puntation = Float.parseFloat(puntutionToEdit);
-                RESTAURANTS.get(i).setPuntation(puntation);
+                try {
+                    String puntutionToEdit = JOptionPane.showInputDialog(null, "indique la nueva puntuacion");
+                    float puntation = Float.parseFloat(puntutionToEdit);
+                    RESTAURANTS.get(i).setPuntation(puntation);
+                } catch (NumberFormatException e) {
+                    JOptionPane.showMessageDialog(null,
+                            "Error, se ha creado el restaurante con una puntuacion inicial de 0 si desea cambiarlo por favor vuelva a editar el restaurante");
+                }
 
             } else {
                 JOptionPane.showMessageDialog(null, "restaurante no valido");
@@ -93,14 +104,13 @@ public class App {
                 }
             }
         }
-        for (int i = 0; i < RESTAURANTS.size(); i++) {
-            if (!RESTAURANTS.isEmpty()) {
+        if (!RESTAURANTS.isEmpty()) {
+            for (int i = 0; i < RESTAURANTS.size(); i++) {
                 mensaje = RESTAURANTS.get(i).toString();
                 JOptionPane.showMessageDialog(null, mensaje);
-            } else {
-                JOptionPane.showMessageDialog(null, "no hay restaurantes en la lista");
-                break;
             }
+        } else {
+            JOptionPane.showMessageDialog(null, "no hay restaurantes en la lista");
         }
     }
 
