@@ -12,7 +12,7 @@ public class Menu {
                 4.Eliminar restaurente.
                 Q. salir.
                 """;
-        return JOptionPane.showInputDialog(null, Menu, Menu, 0);
-    
+        return JOptionPane.showInputDialog(null, Menu, Menu, JOptionPane.INFORMATION_MESSAGE);
+
     }
 }
