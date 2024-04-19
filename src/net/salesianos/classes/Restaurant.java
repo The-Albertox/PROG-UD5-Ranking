@@ -1,13 +1,13 @@
-package net.salesianos.clases;
+package net.salesianos.classes;
 
 
-public class Restaurante {
+public class Restaurant {
     private String restaurantName;
     private String localization;
     private String eschedual;
     private float puntation;
 
-    public Restaurante(String restaurantName, String localization, String eschedual, float puntation) {
+    public Restaurant(String restaurantName, String localization, String eschedual, float puntation) {
         this.restaurantName = restaurantName;
         this.localization = localization;
         this.eschedual = eschedual;
@@ -51,7 +51,7 @@ public class Restaurante {
 
     @Override
     public String toString() {
-        return "nombre" + restaurantName + "\n localizacion " + localization + " \n horario " + eschedual + "\n puntuacion" + puntation;
+        return "nombre " + restaurantName + "\n localizacion " + localization + " \n horario " + eschedual + "\n puntuacion" + puntation;
     }
 
 }

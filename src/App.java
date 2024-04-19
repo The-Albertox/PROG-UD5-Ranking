@@ -3,12 +3,12 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
-import net.salesianos.clases.Restaurante;
+import net.salesianos.classes.Restaurant;
 import net.salesianos.menu.Menu;
 
 public class App {
     static final Scanner KEYBOARD = new Scanner(System.in);
-    static final ArrayList<Restaurante> RESTAURANTS = new ArrayList<>();
+    static final ArrayList<Restaurant> RESTAURANTS = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
 
@@ -57,17 +57,17 @@ public class App {
                     "Error, se ha creado el restaurante con una puntuacion inicial de 0 si desea cambiarlo por favor edite el restaurante");
         }
 
-        Restaurante restaurante = new Restaurante(name, localization, eschedual, puntation);
+        Restaurant restaurante = new Restaurant(name, localization, eschedual, puntation);
         RESTAURANTS.add(restaurante);
     }
 
     public static void editarRestaurante() {
 
         for (int i = 0; i < RESTAURANTS.size(); i++) {
-            String nameToEdit = JOptionPane.showInputDialog(null, "indica el nombre del restaurante a editar");
-            if (nameToEdit.equals(RESTAURANTS.get(i).getRestaurantName())) {
+            String nameOfRestaurant = JOptionPane.showInputDialog(null, "indica el nombre del restaurante a editar");
+            if (nameOfRestaurant.equals(RESTAURANTS.get(i).getRestaurantName())) {
 
-                JOptionPane.showInputDialog(null, "indica el nuevo nombre del restaurant");
+                String nameToEdit =JOptionPane.showInputDialog(null, "indica el nuevo nombre del restaurant");
                 RESTAURANTS.get(i).setRestaurantName(nameToEdit);
 
                 String localizationToEdit = JOptionPane.showInputDialog(null, "introduzca la nueva localizacion");
@@ -94,7 +94,7 @@ public class App {
 
     public static void mostrarRestaurante() {
         String mensaje = "";
-        Restaurante ordenRestaurante;
+        Restaurant ordenRestaurante;
         for (int i = 0; i < RESTAURANTS.size(); i++) {
             for (int j = 0; j < RESTAURANTS.size() - 1; j++) {
                 if (RESTAURANTS.get(j + 1).getPuntation() > RESTAURANTS.get(j).getPuntation()) {
