@@ -1,13 +1,13 @@
-package net.salesianos.classes;
+package net.salesianos.clases;
 
 
-public class Restaurant {
+public class Restaurante {
     private String restaurantName;
     private String localization;
     private String eschedual;
     private float puntation;
 
-    public Restaurant(String restaurantName, String localization, String eschedual, float puntation) {
+    public Restaurante(String restaurantName, String localization, String eschedual, float puntation) {
         this.restaurantName = restaurantName;
         this.localization = localization;
         this.eschedual = eschedual;

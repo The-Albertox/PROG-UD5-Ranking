@@ -3,12 +3,12 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
-import net.salesianos.classes.Restaurant;
+import net.salesianos.clases.Restaurante;
 import net.salesianos.menu.Menu;
 
 public class App {
     static final Scanner KEYBOARD = new Scanner(System.in);
-    static final ArrayList<Restaurant> RESTAURANTS = new ArrayList<>();
+    static final ArrayList<Restaurante> RESTAURANTS = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
 
@@ -57,7 +57,7 @@ public class App {
                     "Error, se ha creado el restaurante con una puntuacion inicial de 0 si desea cambiarlo por favor edite el restaurante");
         }
 
-        Restaurant restaurante = new Restaurant(name, localization, eschedual, puntation);
+        Restaurante restaurante = new Restaurante(name, localization, eschedual, puntation);
         RESTAURANTS.add(restaurante);
     }
 
@@ -94,7 +94,7 @@ public class App {
 
     public static void mostrarRestaurante() {
         String mensaje = "";
-        Restaurant ordenRestaurante;
+        Restaurante ordenRestaurante;
         for (int i = 0; i < RESTAURANTS.size(); i++) {
             for (int j = 0; j < RESTAURANTS.size() - 1; j++) {
                 if (RESTAURANTS.get(j + 1).getPuntation() > RESTAURANTS.get(j).getPuntation()) {
