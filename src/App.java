@@ -67,7 +67,7 @@ public class App {
             String nameOfRestaurant = JOptionPane.showInputDialog(null, "indica el nombre del restaurante a editar");
             if (nameOfRestaurant.equals(RESTAURANTS.get(i).getRestaurantName())) {
 
-                String nameToEdit =JOptionPane.showInputDialog(null, "indica el nuevo nombre del restaurant");
+                String nameToEdit = JOptionPane.showInputDialog(null, "indica el nuevo nombre del restaurant");
                 RESTAURANTS.get(i).setRestaurantName(nameToEdit);
 
                 String localizationToEdit = JOptionPane.showInputDialog(null, "introduzca la nueva localizacion");

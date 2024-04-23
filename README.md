@@ -4,93 +4,93 @@
 
 Este es el menu
 
-![alt text](images\image.png)
+![alt text](.\images\image.png)
 
 Aqui se solicita al usuario que introduzca un nombre
 
-![alt text](images\nombre.png)
+![alt text](.\images\nombre.png)
 
 Aqui se solicita al usuario que introduzca la localizacion
 
-![alt text](images\localizacion.png)
+![alt text](.\images\localizacion.png)
 
 Aqui se solicita al usuario que introduzca el horario
 
-![alt text](images\horario.png)
+![alt text](.\images\horario.png)
 
 Aqui se solicita al usuario que introduzca la puntuacion
 
-![alt text](images\puntuacion.png)
+![alt text](.\images\puntuacion.png)
 
 Si se equivoca saltara el siguiente mensaje y la puntuacion sera 0 por defecto
 
-![alt text](images\puntuacionFallida.png)
+![alt text](.\images\puntuacionFallida.png)
 
 Si desea editar tendra que decir el nombre del restaurante a eliminar
 
-![alt text](images\nombreaEditar.png)
+![alt text](.\images\nombreaEditar.png)
 
 Sino se encuentra el restaurante se mostrara un menseja de error
 
-![alt text](images\restauranteFallido.png)
+![alt text](.\images\restauranteFallido.png)
 
 Se solicitara un nuevo nombre
 
-![alt text](images\nuevoNombre.png)
+![alt text](.\images\nuevoNombre.png)
 
 Se solicitara un nuevo horario
 
-![alt text](images\nuevoHorario.png)
+![alt text](.\images\nuevoHorario.png)
 
 Se solicitara una nueva localizacion
 
-![alt text](images\nuevaLocalizacion.png)
+![alt text](.\images\nuevaLocalizacion.png)
 
 Se solicitara una nueva puntuacion
 
-![alt text](images\nuevaPuntiacion.png)
+![alt text](.\images\nuevaPuntiacion.png)
 
 Si desea ver los restaurente se mostraran asi
 
 Exemplo 1
 
-![alt text](images\datosResturantes.png)
+![alt text](.\images\datosResturantes.png)
 
 Exemplo 2
 
-![alt text](images\datosRestaurante2.png)
+![alt text](.\images\datosRestaurante2.png)
 
 Si desea elimar un restaurente se solicitara el nombre
 
-![alt text](images\restauranteEliminar.png)
+![alt text](.\images\restauranteEliminar.png)
 
 Sino se encuentra mostrara un mensaje de error
 
-![alt text](images\restauranteFallido.png)
+![alt text](.\images\restauranteFallido.png)
 
 Aqui los restaurante añiadidos :
 
 El primero
 
-![alt text](images\restauranteA.png)
+![alt text](.\images\restauranteA.png)
 
 El segundo
 
-![alt text](images\restauranteB.png)
+![alt text](.\images\restauranteB.png)
 
 El tercero
 
-![alt text](images\restauranteC.png)
+![alt text](.\images\restauranteC.png)
 
 En este caso borre el b por lo que solo se mostraran el a y c
 
-![alt text](images\restauranteA.png)
+![alt text](.\images\restauranteA.png)
 
-![alt text](images\restauranteC.png)
+![alt text](.\images\restauranteC.png)
 
 Si se intenta borrar el b mostra un mensaje de error
 
-![alt text](images\restauranteFallido.png)
+![alt text](.\images\restauranteFallido.png)
 
 Y para salir puedes puslar cancelar o Q para salir
 
